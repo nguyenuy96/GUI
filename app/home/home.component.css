@@ -1,0 +1,42 @@
+.add-gly {
+    color: blue;
+}
+#add-a {
+    color: blue;
+
+}
+
+
+.refresh-gly {
+    color:#DAA520;
+}
+#refresh-a {
+    color:#DAA520;
+}
+
+
+.sign-in-gly {
+    color: blue;
+}
+#sign-in-a {
+    color: blue;
+}
+
+
+.sign-up-gly {
+    color: blue;
+}
+#sign-up-a {
+    color: blue;
+}
+
+.nav-brand-red {
+    color: red;
+    font-size: 25px;
+}
+
+
+
+::placeholder {
+    font-style: italic;
+  }

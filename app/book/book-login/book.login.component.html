@@ -1,0 +1,80 @@
+<div class="row" style="width: 95%; margin: auto; padding-top: 2%;">
+    <div class="col-md-8" style="background: lightblue; ">
+        <div style="text-align: center">
+            <h1>All Books</h1>
+        </div>
+        <div class="row" style="padding: 1%" *ngFor="let book of books; let i = index; let length = count">
+            <div *ngIf="i%2===0">
+                <div>
+                    <div class="col-sm-2 col-md-2">
+                        <img src="http://localhost:8888/images/{{books[i].imageName}}" alt="" class="img-rounded img-responsive" />
+                    </div>
+                    <div class="col-sm-4 col-md-4">
+                        <div class="dropdown">
+                            <h4>{{books[i].bookName}}
+                                <button class="btn btn-default glyphicon glyphicon-transfer" data-toggle="dropdown">
+                                    <span></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li *ngFor="let mybook of mybooks">
+                                        <a>{{mybook.bookName}}</a>
+                                    </li>
+                                </ul>
+                            </h4>
+                            <div class="dropdown-menu">
+                                <a>s</a>
+                            </div>
+                        </div>
+
+                        <p>
+                            <b>Author: </b> {{books[i].bookAuthor}}
+                            <br/>
+                            <b>Description: </b> {{books[i].bookDescription}}
+                            <br/>
+                            <b>Date posted: </b>{{books[i].datePost}}
+                            <br/>
+                            <b>Posted by: </b>{{books[i].username}}
+                            <br/>
+                            <b>Address: </b>{{books[i].address}}
+                        </p>
+                    </div>
+                </div>
+                <div *ngIf="length-(i+1)>0">
+                    <div class="col-sm-2 col-md-2">
+                        <img src="http://localhost:8888/images/{{books[i+1].imageName}}" alt="" class="img-rounded img-responsive" />
+                    </div>
+                    <div class="col-sm-4 col-md-4">
+                        <div class="dropdown">
+                            <h4>{{books[i+1].bookName}}
+                                <button class="btn btn-default glyphicon glyphicon-transfer" data-toggle="dropdown">
+                                    <span></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li *ngFor="let mybook of mybooks">
+                                        <a>{{mybook.bookName}}</a>
+                                    </li>
+                                </ul>
+                            </h4>
+                        </div>
+                        <p>
+                            Author: {{books[i].bookAuthor}}
+                            <br/> Description: {{books[i].bookDescription}}
+                            <br/> Date posted: {{books[i].datePost}}
+                            <br/> Posted by: {{books[i].username}}
+                            <br/> Address: {{books[i].address}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4" style="background: cadetblue; padding-left: 5px">
+        <div style="text-align: center">
+            <h1>Books Management</h1>
+        </div>
+        <div class="divider"></div>
+        <div>
+            <h3>My Books</h3>
+        </div>
+    </div>
+</div>
